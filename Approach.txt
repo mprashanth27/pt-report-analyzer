@@ -1,0 +1,32 @@
+1.Install eclipse
+2.Install Python
+3.Install pydev in Eclipse for Python Environment
+
+----
+modeules used for working with excel files :
+ 1.xlrd 
+* could read excel files and access sheets,
+
+cmds in xlrd:
+
+#import xlrd module
+import xlrd
+
+#Open excel file
+workbook= xlrd.open_workbook("Baseline.xlsx")
+
+#Open sheet
+worksheet = workbook.sheet_by_index(0)
+
+# Extracting all columns name
+# For row 0 and column 0
+worksheet.cell_value(0,0)
+
+for i in range(worksheet.ncols):
+    print(worksheet.cell_value(0,i))
+
+NOTE:-
+1.Can open Excel sheet by location&name
+2.Sheets by number or name
+3. can get number of rows(nrows) & number of columns(mcols)
+4.can get all column names
